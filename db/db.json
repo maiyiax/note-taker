@@ -1,11 +1,1 @@
-[
-  {
-    "db": [
-      {
-        "title": "Note 1",
-        "text": "Text",
-        "id": "5b8mven0khqkl9zl"
-      }
-    ]
-  }
-]
+[{"title":"Test Title","text":"Test text"}]
