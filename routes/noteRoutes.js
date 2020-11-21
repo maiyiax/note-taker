@@ -11,9 +11,7 @@ const uniqid = require('uniqid');
 // setup api route
 router.get('/notes', (req, res) => {
     // GET /api/notes should read the db.json file and return all saved notes as JSON 
-    fs.readFile(path.join(__dirname, "../db/db,json"), (err, data) => {
-        if (err) throw err;
-    });           
+    fs.readFileSync(path.join(__dirname, "../db/db,json"));         
     res.json(db);
 });
 
@@ -22,7 +20,8 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
 
     let newNote = req.body;
-
+    fs.readFileSync(path.join(__dirname, "../db/db,json"));
+    
     // give each note a unique id when it's saved (look into npm packages that could do this for you)
     newNote.id = uniqid();
 
@@ -30,7 +29,7 @@ router.post('/notes', (req, res) => {
     db.push(newNote);
 
     // write data tp db.json file
-    fs.writeFileSync(path.join(__dirname, "../db/db,json"), JSON.stringify([{ db }], null, 2));
+    fs.writeFileSync(path.join(__dirname, "../db/db,json"), JSON.stringify({ db }, null, 2));
 
     // then return the new note to the client
     res.send(newNote);
@@ -49,7 +48,7 @@ router.delete('/notes/:id', (req, res) => {
     db.splice(id, 1);
 
     // and then rewrite the notes to the db.json file
-    fs.writeFileSync(path.join(__dirname, "../db/db.json"), JSON.stringify([{ db }], null, 2));
+    fs.writeFileSync(path.join(__dirname, "../db/db.json"), JSON.stringify({ db }, null, 2));
 
     res.send(req.body);
 })

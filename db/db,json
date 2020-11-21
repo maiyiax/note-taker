@@ -1,21 +1,13 @@
-[
-  {
-    "db": [
-      {
-        "title": "Note 1",
-        "text": "Text",
-        "id": "5b8mven0khqkl9zl"
-      },
-      {
-        "title": "Note 2",
-        "text": "Text",
-        "id": "5b8mven0khqklio9"
-      },
-      {
-        "title": "Note 3",
-        "text": "Text",
-        "id": "5b8mven0khqklqru"
-      }
-    ]
-  }
-]
+{
+  "db": [
+    {
+      "title": "Test Title",
+      "text": "Test text"
+    },
+    {
+      "title": "NOTE",
+      "text": "TExt",
+      "id": "5b8mvgdgkhqmta1o"
+    }
+  ]
+}
