@@ -4,9 +4,9 @@
 
 Create an application that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
-[](./public/assets/images/homepage.PNG)
+![](./public/assets/images/homepage.PNG)
 <br>
-[](./public/assets/images/note.jpeg)
+![](./public/assets/images/note.jpeg)
 
 ## User Story
 
